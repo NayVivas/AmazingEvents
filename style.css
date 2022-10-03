@@ -1,0 +1,1643 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css";
+
+/* menu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+}
+
+.imgLogo {
+    margin-left: 10%
+}
+
+
+.buttonNav{
+    background-color: #720026;
+    color: white;
+    border: none;
+    margin-left: 5%;
+}
+
+.buttonNav:hover {
+    background-color: #ce4257 !important;
+    transition: 0.5s !important;
+    color:white !important;
+}
+
+.navbar-start {
+    margin-left: 45%;
+}
+
+.navbar-burger {
+    color: white;
+    cursor: pointer;
+}
+
+/* fin del menu */
+
+
+/* titulos */
+.titulo {
+    position: relative;
+    height: 80vh;
+}
+
+.titulo::before {
+    content: "";
+      background-image: url(./img/LogoAmazingEvents.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      bottom: 0px;
+      left: 0;
+      opacity: 0.2;
+}
+
+/* Guardar para titulo efecto */
+/* .tituloOld {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.tituloOld span{
+    font-size: 22vw;
+    font-weight: 800;
+    text-shadow: -0.8em 0.03em rgba(0, 0, 0, 0.9);
+}
+
+.tituloOld span:not(:first-child) {
+    margin-left: -0.23em;
+} */
+
+.transparente {
+    background-color: transparent;
+}
+
+h1 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #D90068;
+  text-shadow: 0 20px 25px #ffffff, 0 40px 60px #2e2e31;
+  font-size: 6rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+/*   -webkit-text-stroke: 2px rgb(209, 45, 45); */
+}
+
+h2 {
+     font-family:monospace;
+  color: #D90368;
+  text-shadow: 0 20px 25px #ffffff, 0 40px 60px #2e2e31;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 2px rgb(209, 45, 45);
+}
+
+h3 {
+     font-family:monospace;
+  color: #D90368;
+  text-shadow: 0 20px 25px #ffffff, 0 40px 60px #2e2e31;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* fin de titulo */
+
+
+/* checkbox e input */
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.filter {
+    display: none;
+}
+
+.input {
+    margin-left: 10rem;
+    width: 15rem;
+    border: 1px solid #ce4257;
+}
+
+input:hover {
+    background-color: #ce4257;
+    color:white;
+}
+
+#checkBox {
+   display: flex;
+   justify-content: center;
+   margin-top: 2rem;
+}
+
+.checkbox {
+    height: 70%;
+    background-color:#720026;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.checkbox:hover {
+    background-color: #ce4257;
+}
+
+.sombra {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.field {
+  width: 40%;
+}
+
+.button {
+    background-color: #720026;
+    color: white;
+}
+
+.button:hover {
+    background-color: #ce4257;
+    color: white;
+}
+/* fin de checkbox y titulo */
+
+
+/* Fondo en movimiento */
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+  font-family: helvetica, arial, sans-serif;
+}
+
+
+.bg {
+  animation:slide 10s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(59, 1, 35, 0.5) 50%, rgb(247, 239, 245) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+/* Fin de Fondo en movimiento */
+
+/* card */
+
+.containerCard {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.containerCard .card {
+
+    position: relative;
+    height: 250px;
+    background: #fff;
+    width: 30rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(241, 1, 73, 0.8);
+    opacity: 1;
+    transform: scale(0.9);
+    transition: 0.7s ease-in-out all;
+}
+
+.containerCard .card.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.containerCard .card .imgBx {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    height: calc(100% - 20px);
+    width: calc(100% - 250px);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.containerCard .card .imgBx img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  left:50%;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+.containerCard .card .content {
+ 
+    top: 50%;
+    left: 75%;
+    width: calc(100% - 250px);
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerCard .card .content h3 {
+    color:#720026;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.containerCard .card .content button {
+
+    padding: 0px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    background-color: #720026;
+}
+
+/* card details */
+.containerCardDetails .card {
+    position:relative;
+    height: 400px;
+    background: #fff;
+    display: flex;
+    width: 60%;
+    border: 1px solid #720026;
+    box-shadow: 0 5px 15px rgba(241, 1, 73, 0.8);
+    margin-bottom: 10%;
+}
+
+.containerCardDetails .card .imgBx {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(190, 182, 182, 0.1);
+    height: calc(100% - 20px);
+    width: calc(100% - 400px);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid rgba(250, 250, 250, 0.2); 
+    box-shadow:  5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.containerCardDetails .card .imgBx img {
+    height: 95%;
+    width: 95%;
+    border-radius: 5%;
+}
+
+
+.containerCardDetails .card .content {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    width: 45%;
+    height: 93%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5%;
+    border: 1px solid #720026;
+}
+
+.containerCardDetails .card .content h3 {
+    color:#720026;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.containerCardDetails .card .content a {
+    background: #720026;;
+    padding: 0px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* formulario */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.containerForm {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid #720026;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.form h2 {
+    position: relative;
+    color: #720026;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.form h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 80px;
+    height: 4px;
+    background: #720026;
+}
+
+.form .inputBox {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .inputBox  input {
+    width: 100%;
+    background: #720026;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px rgba(0,0,0,0.05);
+}
+
+.form .inputBox  input:focus {
+    background: #fff;
+    color:#720026;
+}
+
+.form .inputBox input::placeholder {
+    color: #fff;
+}
+
+.form .inputBox input[type="submit"] {
+    background: #720026;
+    color:#fff;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border: 1px solid #720026;
+}
+
+.form .inputBox input[type="submit"]:hover {
+    background: #fff;
+    color: #720026;
+}
+
+
+.forget {
+    margin-top: 5px;
+    color:#fff;
+}
+
+.forget a {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* fin de formulario */
+
+/* Table */
+table {
+    margin: 0 auto;
+}
+
+.table {
+    position: relative;
+}
+
+.table::before {
+    content: "";
+      background:#720026;
+      background-position: 20%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+}
+
+.odd {
+    position: relative;
+    z-index: 2;
+    width: 33%;
+}
+
+.add {
+  width: 80%;
+}
+/* Fin de table */
+
+
+.footer1 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+
+h1 {
+  font-size: 5rem;
+  margin-left: 7rem;
+}
+
+/* titulos */
+.titulo::before {
+      background-size: 100%;
+      background-position: 100%;
+}
+/* fin de titulo */
+
+.navbar-start {
+    margin-left: 35%;
+}
+
+.container {
+    margin-right: 15rem;
+}
+
+/* card */
+
+.containerCard {
+    width: 95%;
+}
+
+
+.containerCard .card {
+    width: 25rem;
+}
+
+.containerCard .card .imgBx {
+    width: calc(100% - 200px);
+}
+
+/* card details */
+
+.containerCardDetails .card .imgBx {
+    width: calc(100% - 300px);
+}
+
+/* formulario */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.containerForm {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid #720026;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.form h2 {
+    position: relative;
+    color: #720026;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.form h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 80px;
+    height: 4px;
+    background: #720026;
+}
+
+.form .inputBox {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .inputBox  input {
+    width: 100%;
+    background: #720026;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px rgba(0,0,0,0.05);
+}
+
+.form .inputBox  input:focus {
+    background: #fff;
+    color:#720026;
+}
+
+.form .inputBox input::placeholder {
+    color: #fff;
+}
+
+.form .inputBox input[type="submit"] {
+    background: #720026;
+    color:#fff;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border: 1px solid #720026;
+}
+
+.form .inputBox input[type="submit"]:hover {
+    background: #fff;
+    color: #720026;
+}
+
+
+.forget {
+    margin-top: 5px;
+    color:#fff;
+}
+
+.forget a {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* fin de formulario */
+
+/* Table */
+table {
+    margin: 0 auto;
+}
+
+.table {
+    position: relative;
+}
+
+.table::before {
+    content: "";
+      background:#720026;
+      background-position: 20%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+}
+
+.odd {
+    position: relative;
+    z-index: 2;
+    width: 33%;
+}
+
+.add {
+  width: 80%;
+}
+/* Fin de table */
+
+/* Pagina details */
+
+.details {
+    width: 50rem;
+    border: 2px solid purple;
+    border-radius: 5%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.details1 {
+    margin: 1rem;
+    border: 2px solid purple;
+    border-radius: 5%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* fin pagina details */
+
+.footer1 {
+    margin-right: 5rem;
+}
+}
+@media (max-width: 992px) {
+     h1 {
+  font-size: 5rem;
+  margin-left: 7rem;
+}
+/* titulos */
+.titulo::before {
+      background-size: 100%;
+      background-position: 100%;
+}
+/* fin de titulo */
+
+.navbar-burger {
+    background-color: rgb(114, 0, 38, 0.5) !important;
+    margin-left: 90%;
+}
+.navbar-menu {
+    width: 50%;
+    background-color: rgb(240, 212, 238);
+    height: 30rem;
+    border-radius: 2rem;
+
+}
+
+.navbar-item {
+    margin-bottom: 20%;   
+}
+
+.container {
+    margin-right: 15rem;
+}
+
+/* card */
+
+.containerCard {
+    width: 95%;
+}
+
+
+.containerCard .card {
+    width: 25rem;
+}
+
+.containerCard .card .imgBx {
+    width: calc(100% - 200px);
+}
+
+/* card details */
+
+.containerCardDetails .card .imgBx {
+    width: calc(100% - 300px);
+}
+
+/* formulario */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.containerForm {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid #720026;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.form h2 {
+    position: relative;
+    color: #720026;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.form h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 80px;
+    height: 4px;
+    background: #720026;
+}
+
+.form .inputBox {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .inputBox  input {
+    width: 100%;
+    background: #720026;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px rgba(0,0,0,0.05);
+}
+
+.form .inputBox  input:focus {
+    background: #fff;
+    color:#720026;
+}
+
+.form .inputBox input::placeholder {
+    color: #fff;
+}
+
+.form .inputBox input[type="submit"] {
+    background: #720026;
+    color:#fff;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border: 1px solid #720026;
+}
+
+.form .inputBox input[type="submit"]:hover {
+    background: #fff;
+    color: #720026;
+}
+
+
+.forget {
+    margin-top: 5px;
+    color:#fff;
+}
+
+.forget a {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* fin de formulario */
+
+/* Table */
+table {
+    margin: 0 auto;
+}
+
+.table {
+    position: relative;
+}
+
+.table::before {
+    content: "";
+      background:#720026;
+      background-position: 20%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+}
+
+.odd {
+    position: relative;
+    z-index: 2;
+    width: 33%;
+}
+
+.add {
+  width: 80%;
+}
+/* Fin de table */
+
+/* Pagina details */
+
+.details {
+    width: 50rem;
+    border: 2px solid purple;
+    border-radius: 5%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.details1 {
+    margin: 1rem;
+    border: 2px solid purple;
+    border-radius: 5%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* fin pagina details */
+
+.footer1 {
+    margin-right: 5rem;
+}
+}
+
+@media (max-width: 768px) {
+
+.h1Responsive {
+    font-size: 4rem;
+}
+
+/* menu */
+
+.navbar-burger {
+    margin-left: 100vh;
+    border-radius: 15%;
+    background-color: rgb(114, 0, 38, 0.5) !important;
+}
+.navbar-menu {
+    width: 70%;
+    background-color: rgb(240, 212, 238);
+    height: 25rem;
+    border-radius: 2rem;
+}
+
+.buttonNav {
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    margin-right: 5rem;
+    text-align: center;
+}
+
+.titulo::before {
+    background-size: 85%;
+    background-position: 4rem 10rem;
+}
+
+#checkBox {
+    flex-wrap: wrap;
+}
+
+#tituloUp {
+    font-size: 5rem;
+    margin-left: 10rem;
+    text-align: center;
+}
+
+/* card */
+
+.containerCard {
+    margin-top: 4rem;
+}
+
+/* card details */
+.containerCardDetails .card {
+    width: 70%;
+}
+
+.containerCardDetails .card .imgBx {
+    height: calc(100% - 10px);
+    width: calc(100% - 250px);
+}
+/* formulario */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.containerForm {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid #720026;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.form h2 {
+    position: relative;
+    color: #720026;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.form h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 80px;
+    height: 4px;
+    background: #720026;
+}
+
+.form .inputBox {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .inputBox  input {
+    width: 100%;
+    background: #720026;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px rgba(0,0,0,0.05);
+}
+
+.form .inputBox  input:focus {
+    background: #fff;
+    color:#720026;
+}
+
+.form .inputBox input::placeholder {
+    color: #fff;
+}
+
+.form .inputBox input[type="submit"] {
+    background: #720026;
+    color:#fff;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border: 1px solid #720026;
+}
+
+.form .inputBox input[type="submit"]:hover {
+    background: #fff;
+    color: #720026;
+}
+
+
+.forget {
+    margin-top: 5px;
+    color:#fff;
+}
+
+.forget a {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* fin de formulario */
+
+/* Table */
+table {
+    margin: 0 auto;
+}
+
+.table {
+    position: relative;
+}
+
+.table::before {
+    content: "";
+      background:#720026;
+      background-position: 20%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+}
+
+.odd {
+    position: relative;
+    z-index: 2;
+    width: 33%;
+}
+
+
+.add {
+  width: 80%;
+}
+/* Fin de table */
+
+/* Pagina details */
+
+.details {
+    width: 50rem;
+    border: 2px solid purple;
+    border-radius: 5%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.details1 {
+    margin: 1rem;
+    border: 2px solid purple;
+    border-radius: 5%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* fin pagina details */
+
+.footer1 {
+    margin-left: 5rem;
+}
+}
+
+@media (max-width: 480px){
+
+    body {
+    width: 720px;
+    }
+/* menu */
+.navbar-burger {
+    width: 5rem;
+    height: 5rem;
+}
+.navbar-menu {
+    width: 100vh;
+    background-color: rgb(240, 212, 238);
+    height: 25rem;
+    border-radius: 2rem;
+}
+
+.buttonNav {
+    padding-bottom: 3rem;
+    margin-bottom: 1.5rem;
+    margin-right: 2rem;
+}
+
+.imgLogo {
+    width: 50%;
+}
+/* fin del menu */
+.input {
+    margin-left: 0rem;
+    width: 20rem;
+    height: 4rem;
+}
+
+
+#checkBox {
+   font-size: 1.5rem;
+}
+
+.botonS {
+    width: 4rem;
+    height: 4rem;
+    background-color: #720026 !important;
+}
+
+.container {
+    margin-left: 10rem;
+}
+
+#tituloUp {
+    margin-right: 20rem;
+}
+
+.containerCard {
+    justify-content: center;
+    margin-left: 3rem;
+}
+
+.containerCard .card {
+    height: 50rem;
+    width: 50rem;
+}
+
+.containerCard .card .imgBx {
+    height: calc(100% - 400px);
+    width: calc(100% - 20px);
+}
+
+.containerCard .card .content {
+    top: 75%;
+    left: 50%;
+    height: calc(100% - 400px);
+    width: calc(100% - 20px);
+    font-size: 2rem;
+}
+
+/* card details */
+.containerCardDetails .card {
+    height: 600px;
+    width: 80%;
+
+}
+
+.containerCardDetails .card .imgBx {
+    height: calc(100% - 300px);
+    width: calc(100% - 10px);
+}
+
+
+.containerCardDetails .card .content {
+    top: 76%;
+    left: 50%;
+    width: 90%;
+    height: 45%;
+    border: none;
+}
+/* formulario */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.containerForm {
+    position: relative;
+    width: 100vh;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid #720026;
+}
+
+.form {
+    position: relative;
+    width: 100vh;
+    height: 100%;
+    padding: 40px;
+}
+
+.form h2 {
+    position: relative;
+    color: #720026;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.form h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 80px;
+    height: 4px;
+    background: #720026;
+}
+
+.form .inputBox {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .inputBox  input {
+    width: 100%;
+    background: #720026;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px rgba(0,0,0,0.05);
+}
+
+.form .inputBox  input:focus {
+    background: #fff;
+    color:#720026;
+}
+
+.form .inputBox input::placeholder {
+    color: #fff;
+}
+
+.form .inputBox input[type="submit"] {
+    background: #720026;
+    color:#fff;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border: 1px solid #720026;
+}
+
+.form .inputBox input[type="submit"]:hover {
+    background: #fff;
+    color: #720026;
+}
+
+
+.forget {
+    margin-top: 5px;
+    color:#fff;
+}
+
+.forget a {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* fin de formulario */
+
+/* Table */
+table {
+    margin: 0 auto;
+}
+
+.table {
+    position: relative;
+}
+
+.table::before {
+    content: "";
+      background:#720026;
+      background-position: 20%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+}
+
+.odd {
+    position: relative;
+    z-index: 2;
+    width: 33%;
+}
+
+.add {
+  width: 80%;
+}
+/* Fin de table */
+
+/* Pagina details */
+
+.details {
+    width: 50rem;
+    border: 2px solid purple;
+    border-radius: 5%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.details1 {
+    margin: 1rem;
+    border: 2px solid purple;
+    border-radius: 5%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* fin pagina details */
+
+.footer1 {
+    display: flex;
+    flex-direction: column;
+}
+}
+
+@media (max-width: 320px) {
+/* menu */
+
+.imgLogo {
+    width: 50%;
+    margin-left: 5rem;
+}
+
+
+.buttonNav {
+    padding-bottom: 3rem;
+    margin-bottom: 1.5rem;
+    margin-right: 2rem;
+}
+
+/* card */
+
+.containerCard {
+    width: 100%;
+    margin: 0;
+}
+
+.containerCard .card {
+    height: 50rem;
+    width: 50rem;
+}
+
+.containerCard .card .imgBx {
+    height: calc(100% - 400px);
+    width: calc(100% - 20px);
+}
+
+.containerCard .card .content {
+    top: 65%;
+    left: 50%;
+    height: calc(100% - 400px);
+    width: calc(100% - 20px);
+}
+
+/* card details */
+.containerCardDetails .card {
+    height: 800px;
+    width: 90%;
+
+}
+
+.containerCardDetails .card .imgBx {
+    height: calc(100% - 380px);
+    width: calc(100% - 10px);
+}
+
+
+.containerCardDetails .card .content {
+    top: 76%;
+}
+/* formulario */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.containerForm {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid #720026;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.form h2 {
+    position: relative;
+    color: #720026;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.form h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 80px;
+    height: 4px;
+    background: #720026;
+}
+
+.form .inputBox {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .inputBox  input {
+    width: 100%;
+    background: #720026;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px rgba(0,0,0,0.05);
+}
+
+.form .inputBox  input:focus {
+    background: #fff;
+    color:#720026;
+}
+
+.form .inputBox input::placeholder {
+    color: #fff;
+}
+
+.form .inputBox input[type="submit"] {
+    background: #720026;
+    color:#fff;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border: 1px solid #720026;
+}
+
+.form .inputBox input[type="submit"]:hover {
+    background: #fff;
+    color: #720026;
+}
+
+
+.forget {
+    margin-top: 5px;
+    color:#fff;
+}
+
+.forget a {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* fin de formulario */
+
+/* Table */
+table {
+    margin: 0 auto;
+}
+
+.table {
+    position: relative;
+}
+
+.table::before {
+    content: "";
+      background:#720026;
+      background-position: 20%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+}
+
+.odd {
+    position: relative;
+    z-index: 2;
+    width: 33%;
+}
+
+.add {
+  width: 80%;
+}
+/* Fin de table */
+
+/* Pagina details */
+
+.details {
+    width: 50rem;
+    border: 2px solid purple;
+    border-radius: 5%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.details1 {
+    margin: 1rem;
+    border: 2px solid purple;
+    border-radius: 5%;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* fin pagina details */
+
+.footer1 {
+    display: flex;
+    flex-direction: row;
+}
+}
